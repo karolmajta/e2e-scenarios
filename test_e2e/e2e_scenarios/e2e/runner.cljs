@@ -1,8 +1,8 @@
-(ns e2e-taxi-example.e2e.runner
+(ns e2e-scenarios.e2e.runner
   (:require [cljs.test :refer-macros [run-tests]]
             [cljs.nodejs :as node]
             [cljs-webdriver-scenario.scenario :as scenario]
-            [e2e-taxi-example.e2e.counter-test]))
+            [e2e-scenarios.e2e.counter-test]))
 
 (def electron-options
   #js {:host "localhost"
@@ -13,7 +13,7 @@
 
 (defn -main [& args]
   (run-tests
-    'e2e-taxi-example.e2e.counter-test))
+    'e2e-scenarios.e2e.counter-test))
 
 (node/enable-util-print!)
 (scenario/set-options! electron-options)

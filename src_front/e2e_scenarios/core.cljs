@@ -1,4 +1,4 @@
-(ns e2e_taxi_example.core
+(ns e2e_scenarios.core
   (:require [figwheel.client :as fw :include-macros true]
             [reagent.core :as r]))
 

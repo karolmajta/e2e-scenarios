@@ -1,4 +1,4 @@
-(ns e2e-taxi-example.e2e.counter-test
+(ns e2e-scenarios.e2e.counter-test
   (:require [cljs.test :refer-macros [deftest async is]]
             [cljs-webdriver-scenario.scenario :refer [client]
                                               :refer-macros [defscenario]]))

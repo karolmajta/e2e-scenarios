@@ -1,4 +1,4 @@
-(defproject e2e-taxi-example "0.1.0-SNAPSHOT"
+(defproject e2e-scenarios "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -21,7 +21,7 @@
             "startapp" ["trampoline" "shell" "./electron/electron" "app"]}
   :hooks [leiningen.cljsbuild]
   :cljsbuild {:builds
-              {:main     {:id           "e2e-taxi-example"
+              {:main     {:id           "e2e-scenarios-example"
                           :source-paths ["src"]
                           :incremental  true
                           :jar          true
@@ -48,7 +48,7 @@
                                          ;; :source-map "app/js/test.js.map"
                                          :pretty-print   true
                                          :output-wrapper true}}
-               :frontend {:id           "e2e-taxi-example-reagent"
+               :frontend {:id           "e2e-scenarios-example-reagent"
                           :source-paths ["src_front"]
                           :incremental  true
                           :jar          true
@@ -71,12 +71,8 @@
 
                                          ;;:source-map "app/js/test.js.map"
                                          :pretty-print   true
-                                         :output-wrapper true
-
-                                         ;; main
-                                         ;:main 'e2e-taxi-example.core.init!
-                                         }}
-               :e2e      {:id           "e2e-taxi-example-e2etests"
+                                         :output-wrapper true}}
+               :e2e      {:id           "e2e-scenarios-example-e2etests"
                           :source-paths ["test_e2e"]
                           :incremental  true
                           :jar          false

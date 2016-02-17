@@ -13,3 +13,6 @@ node_modules/*
 *.ipr
 *.iws
 electron/*
+app/js/out/
+app/js/front.js
+app/js/cljsbuild-main.js

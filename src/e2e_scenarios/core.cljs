@@ -1,4 +1,4 @@
-(ns e2e_taxi_example.core
+(ns e2e_scenarios.core
     (:require [cljs.nodejs :as nodejs]))
 
 (def path (nodejs/require "path"))

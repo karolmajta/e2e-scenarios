@@ -98,7 +98,8 @@
 
                                          ;;:source-map "app/js/test.js.map"
                                          :pretty-print   true
-                                         :output-wrapper true}}}}
+                                         :output-wrapper true}}}
+              :test-commands {"e2e" ["node" "target/test_e2e/main.js"]}}
   :figwheel {:http-server-root "public"
              :ring-handler figwheel-middleware/app
              :server-port 3449})

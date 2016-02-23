@@ -22,21 +22,19 @@ You need [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) t
 instrument electron using selenium. It's just a standalone binary. You can
 [get it here](http://chromedriver.storage.googleapis.com/index.html?path=2.21/).
 
-After download just enter the directory where you extracted the archive and
-run `chromedriver` like so:
+Make sure `chromedriver` is on your path, or set environment variable
+`CHROMEDRIVER_BIN`.
 
-    $ chromedriver --url-base=wd/hub --port=9515
+    $ lein cljsbuild test e2e
 
-Now you are ready to build and run the tests. To build the tests do:
+If you don't have `chromedrvier` on your PATH do:
 
-    $ lein cljsbuild once e2e
-
-To run the tests:
-
-    $ node target/test_e2e/main.js
+    $ CHROMEDRIVER_BIN=<path/to/chromedriver> lein cljsbuild test e2e
 
 You should see app window appear two times on the screen and some things
 happening. After that you will see a test report in your terminal.
+
+Re run this command whenever your source or your tests change.
 
 ## How is this code structured.
 
@@ -64,9 +62,6 @@ condition and watch what happens. Make them crash by using invalid css selector 
 see what happens.
 
 ## Todo?
-
-A lein plugin that would automate all 3 steps described in "Building and running
-the tests" would probably be nice.
 
 Maybe some support for `:before` and `:after` test setup? I am not sure if we
 need that.
